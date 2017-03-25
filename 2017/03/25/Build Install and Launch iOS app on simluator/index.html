@@ -8,20 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Build1# TBD
 Install12# list simluator devicesxcrun simctl list -j devices
-123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &amp;apos;.devicetypes[].name&amp;apos;...iPhone 7iPhone 7">
+123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &apos;.devicetypes[].name&apos;...iPhone 7iPhone 7 Plus...
+1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build Install and Launch iOS app on Simulator">
 <meta property="og:url" content="https://ovpt.github.io/2017/03/25/Build Install and Launch iOS app on simluator/index.html">
 <meta property="og:site_name" content="ovpt">
 <meta property="og:description" content="Build1# TBD
 Install12# list simluator devicesxcrun simctl list -j devices
-123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &amp;apos;.devicetypes[].name&amp;apos;...iPhone 7iPhone 7">
-<meta property="og:updated_time" content="2017-03-25T11:44:55.000Z">
+123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &apos;.devicetypes[].name&apos;...iPhone 7iPhone 7 Plus...
+1">
+<meta property="og:updated_time" content="2017-03-25T11:55:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build Install and Launch iOS app on Simulator">
 <meta name="twitter:description" content="Build1# TBD
 Install12# list simluator devicesxcrun simctl list -j devices
-123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &amp;apos;.devicetypes[].name&amp;apos;...iPhone 7iPhone 7">
+123456# list simluator device typesxcrun simctl list -j devicetypes | jq -r &apos;.devicetypes[].name&apos;...iPhone 7iPhone 7 Plus...
+1">
     
     
         
@@ -140,15 +143,15 @@ Install12# list simluator devicesxcrun simctl list -j devices
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># TBD</div></pre></td></tr></table></figure>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># list simluator devices</div><div class="line">xcrun simctl list -j devices</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># list simluator device types</div><div class="line">xcrun simctl list -j devicetypes | jq -r &apos;.devicetypes[].name&apos;</div><div class="line">...</div><div class="line">iPhone 7</div><div class="line">iPhone 7 Plus</div><div class="line">...</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># get UDID by device type</div><div class="line">export SIM_DEVICE_TYPE=&apos;iPhone 7&apos;</div><div class="line">UDID=$(xcrun simctl list -j devices | jq -r &apos;.devices.&quot;iOS 10.2&quot;[] | select(.name==env.SIM_DEVICE_TYPE) | .udid&apos;)</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># launch simluator</div><div class="line">xcrun instruments -w $UDID</div><div class="line">open -a /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args $UDID</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># get booted simluator</div><div class="line">xcrun simctl list -j devices | jq -r &apos;.devices.&quot;iOS 10.2&quot;[] | select(.state==&quot;Booted&quot;) | .udid&apos;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># install app</div><div class="line">xcrun simctl install booted ./TestApp-iphonesimulator.app</div></pre></td></tr></table></figure>
-<h2 id="Launch"><a href="#Launch" class="headerlink" title="Launch"></a>Launch</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># launch installed app</div><div class="line">xcrun simctl launch booted io.appium.TestApp</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># terminate app</div><div class="line">xcrun simctl terminate booted io.appium.TestApp</div></pre></td></tr></table></figure>
+    <h2 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># TBD</span></div></pre></td></tr></table></figure>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># list simluator devices</span></div><div class="line">xcrun simctl list -j devices</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># list simluator device types</span></div><div class="line">xcrun simctl list -j devicetypes | jq -r <span class="string">'.devicetypes[].name'</span></div><div class="line">...</div><div class="line">iPhone 7</div><div class="line">iPhone 7 Plus</div><div class="line">...</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># get UDID by device type</span></div><div class="line"><span class="built_in">export</span> SIM_DEVICE_TYPE=<span class="string">'iPhone 7'</span></div><div class="line">UDID=$(xcrun simctl list -j devices | jq -r <span class="string">'.devices."iOS 10.2"[] | select(.name==env.SIM_DEVICE_TYPE) | .udid'</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># launch simluator</span></div><div class="line">xcrun instruments -w <span class="variable">$UDID</span></div><div class="line">open <span class="_">-a</span> /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args <span class="variable">$UDID</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># get booted simluator</span></div><div class="line">xcrun simctl list -j devices | jq -r <span class="string">'.devices."iOS 10.2"[] | select(.state=="Booted") | .udid'</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install app</span></div><div class="line">xcrun simctl install booted ./TestApp-iphonesimulator.app</div></pre></td></tr></table></figure>
+<h2 id="Launch"><a href="#Launch" class="headerlink" title="Launch"></a>Launch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># launch installed app</span></div><div class="line">xcrun simctl launch booted io.appium.TestApp</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># terminate app</span></div><div class="line">xcrun simctl terminate booted io.appium.TestApp</div></pre></td></tr></table></figure>
 
   </div>
 </article>
