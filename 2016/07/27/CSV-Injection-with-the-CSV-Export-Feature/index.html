@@ -7,22 +7,25 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-{&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection">
+1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
+这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
+123// payload&amp;#123;&quot;op&quot;: &quot;r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSV Injection with the CSV Export Feature">
 <meta property="og:url" content="https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/index.html">
 <meta property="og:site_name" content="ovpt">
 <meta property="og:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-{&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection">
+1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
+这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
+123// payload&amp;#123;&quot;op&quot;: &quot;r">
 <meta property="og:image" content="https://ovpt.github.io/images/csv-injection-sample.png">
-<meta property="og:updated_time" content="2017-03-25T07:44:52.000Z">
+<meta property="og:updated_time" content="2017-03-25T07:56:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSV Injection with the CSV Export Feature">
 <meta name="twitter:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-{&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection">
+1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
+这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
+123// payload&amp;#123;&quot;op&quot;: &quot;r">
 <meta name="twitter:image" content="https://ovpt.github.io/images/csv-injection-sample.png">
     
     
@@ -83,9 +86,7 @@
         <li><a class="icon" href="http://reddit.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
         <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
         <li><a class="icon" href="http://digg.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&name=CSV Injection with the CSV Export Feature&description=&lt;h1 id=&quot;发现CSV-Injection漏洞&quot;&gt;&lt;a href=&quot;#发现CSV-Injection漏洞&quot; class=&quot;headerlink&quot; title=&quot;发现CSV Injection漏洞&quot;&gt;&lt;/a&gt;发现CSV Injection漏洞&lt;/h1&gt;&lt;p&gt;一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。&lt;br&gt;"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&name=CSV Injection with the CSV Export Feature&description="><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
       </ul>
     </div>
     <div id="toc">
@@ -129,10 +130,9 @@
 
   <div class="content" itemprop="articleBody">
     <h1 id="发现CSV-Injection漏洞"><a href="#发现CSV-Injection漏洞" class="headerlink" title="发现CSV Injection漏洞"></a>发现CSV Injection漏洞</h1><p>一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。</p>
-<p><code>{&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;}</code></p>
-<p>这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。<br><a id="more"></a><br>payload</p>
-<p><code>{&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;=cmd|&#39;/C calc&#39;!A0&quot;}</code></p>
-<p><code>{&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;-2+3+cmd|&#39;/C calc&#39;!A0&quot;}</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="string">"op"</span>: <span class="string">"replace"</span>, <span class="string">"name"</span>: <span class="string">"+-=!|"</span>&#125;</div></pre></td></tr></table></figure>
+<p>这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// payload</span></div><div class="line">&#123;<span class="string">"op"</span>: <span class="string">"replace"</span>, <span class="string">"name"</span>: <span class="string">"=cmd|'/C calc'!A0"</span>&#125;</div><div class="line">&#123;<span class="string">"op"</span>: <span class="string">"replace"</span>, <span class="string">"name"</span>: <span class="string">"-2+3+cmd|'/C calc'!A0"</span>&#125;</div></pre></td></tr></table></figure>
 <p>用户下载后用Microsoft Excel打开csv文件时，虽然会有安全警告，但是从可信站点下载的文件，用户很容易忽略这些警告，导致命令注入。</p>
 <p><img src="/images/csv-injection-sample.png" alt="CSV Injection"></p>
 <h1 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h1><ul>
