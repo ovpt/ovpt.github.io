@@ -29,24 +29,37 @@
 <meta name="twitter:image" content="https://ovpt.github.io/images/csv-injection-sample.png">
     
     
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
     <!-- title -->
     <title>CSV Injection with the CSV Export Feature</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <!-- rss -->
     
     
-    <!-- jquery -->
-    <script src="/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body>
     
       <div id="header-post">
   <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -57,37 +70,40 @@
          
           <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="https://github.com/ovpt">Projects</a></li>
+          <li><a href="http://github.com/ovpt">Projects</a></li>
         
       </ul>
     </span>
     <br/>
     <span id="actions">
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
       <ul>
+        
+        <li><a class="icon" href="/2017/03/25/Build Install and Launch iOS app on simluator/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
       </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
     <br/>
     <div id="share" style="display: none">
       <ul>
-        <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="https://twitter.com/share?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&text=CSV Injection with the CSV Export Feature"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&is_video=false&description=CSV Injection with the CSV Export Feature"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="mailto:?subject=CSV Injection with the CSV Export Feature&body=Check out this article: https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="https://getpocket.com/save?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://reddit.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://digg.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
-        <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&name=CSV Injection with the CSV Export Feature&description="><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
-      </ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&text=CSV Injection with the CSV Export Feature"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&is_video=false&description=CSV Injection with the CSV Export Feature"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSV Injection with the CSV Export Feature&body=Check out this article: https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&name=CSV Injection with the CSV Export Feature&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
     </div>
     <div id="toc">
       <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#发现CSV-Injection漏洞"><span class="toc-number">1.</span> <span class="toc-text">发现CSV Injection漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何解决"><span class="toc-number">2.</span> <span class="toc-text">如何解决</span></a></li></ol>
@@ -143,15 +159,60 @@
   </div>
 </article>
 
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ovpt">Projects</a></li>
+        
+      </ul>
     </div>
 
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#发现CSV-Injection漏洞"><span class="toc-number">1.</span> <span class="toc-text">发现CSV Injection漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何解决"><span class="toc-number">2.</span> <span class="toc-text">如何解决</span></a></li></ol>
+    </div>
 
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&text=CSV Injection with the CSV Export Feature"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&is_video=false&description=CSV Injection with the CSV Export Feature"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSV Injection with the CSV Export Feature&body=Check out this article: https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&title=CSV Injection with the CSV Export Feature"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/&name=CSV Injection with the CSV Export Feature&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
-      </div>
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
     <footer id="footer">
   <div class="footer-left">
     Copyright &copy; 2017 ovpt
@@ -166,14 +227,24 @@
          
           <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="https://github.com/ovpt">Projects</a></li>
+          <li><a href="http://github.com/ovpt">Projects</a></li>
         
       </ul>
     </nav>
   </div>
 </footer>
 
-    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
 <script src="/js/main.js"></script>
 <!-- Google Analytics -->
 
@@ -182,24 +253,10 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-87736194-1', 'auto');
+        ga('create', 'UA-86660611-1', 'auto');
         ga('send', 'pageview');
     </script>
 
 <!-- Disqus Comments -->
 
-    <script type="text/javascript">
-        var disqus_shortname = 'ovpt';
 
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script>
-
-
-</body>
-</html>
