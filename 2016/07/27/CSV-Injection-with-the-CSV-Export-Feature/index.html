@@ -16,14 +16,14 @@
 <meta property="og:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
 {&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}
 这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection">
-<meta property="og:image" content="https://github.com/ovpt/ovpt.github.io/blob/master/images/csv-injection-sample.png">
-<meta property="og:updated_time" content="2017-03-25T07:14:52.000Z">
+<meta property="og:image" content="https://ovpt.github.io/content/images/2016/07/27/csv-injection-sample.png">
+<meta property="og:updated_time" content="2017-03-25T07:34:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSV Injection with the CSV Export Feature">
 <meta name="twitter:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
 {&amp;quot;op&amp;quot;: &amp;quot;replace&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;+-=!|&amp;quot;}
 这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection">
-<meta name="twitter:image" content="https://github.com/ovpt/ovpt.github.io/blob/master/images/csv-injection-sample.png">
+<meta name="twitter:image" content="https://ovpt.github.io/content/images/2016/07/27/csv-injection-sample.png">
     
     
     <!-- title -->
@@ -134,7 +134,7 @@
 <p><code>{&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;=cmd|&#39;/C calc&#39;!A0&quot;}</code></p>
 <p><code>{&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;-2+3+cmd|&#39;/C calc&#39;!A0&quot;}</code></p>
 <p>用户下载后用Microsoft Excel打开csv文件时，虽然会有安全警告，但是从可信站点下载的文件，用户很容易忽略这些警告，导致命令注入。</p>
-<p><img src="https://github.com/ovpt/ovpt.github.io/blob/master/images/csv-injection-sample.png" alt="CSV Injection"></p>
+<p><img src="/content/images/2016/07/27/csv-injection-sample.png" alt="CSV Injection"></p>
 <h1 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h1><ul>
 <li>后端与前端都需要校验输入的参数是否有危害性</li>
 <li>导出csv需要对首位的特殊符号转义。针对Excel的话，如果首位是=，+，和-，需要加一位’来转义。比如：’-2+2+cmd|’ /C calc’!A0</li>
