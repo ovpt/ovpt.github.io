@@ -6,26 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
-123// payload&amp;#123;&quot;op&quot;: &quot;r">
+    <meta name="description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。 1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125; 这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。 123// payload&amp;#123;&quot;op&quot;: &quot;r">
+<meta name="keywords" content="security">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSV Injection with the CSV Export Feature">
 <meta property="og:url" content="https://ovpt.github.io/2016/07/27/CSV-Injection-with-the-CSV-Export-Feature/index.html">
 <meta property="og:site_name" content="ovpt">
-<meta property="og:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
-123// payload&amp;#123;&quot;op&quot;: &quot;r">
+<meta property="og:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。 1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125; 这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。 123// payload&amp;#123;&quot;op&quot;: &quot;r">
 <meta property="og:image" content="https://ovpt.github.io/images/csv-injection-sample.png">
 <meta property="og:updated_time" content="2017-03-25T07:56:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSV Injection with the CSV Export Feature">
-<meta name="twitter:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。
-1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125;
-这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。
-123// payload&amp;#123;&quot;op&quot;: &quot;r">
+<meta name="twitter:description" content="发现CSV Injection漏洞一边测试一边看手头上这个项目的源码，发现后端对某个REST请求的Request Body没有完整的校验，可以传入任意字符。 1&amp;#123;&quot;op&quot;: &quot;replace&quot;, &quot;name&quot;: &quot;+-=!|&quot;&amp;#125; 这个问题原本影响不大，但是结合另外一个导出csv报表的功能，导致了csv injection。 123// payload&amp;#123;&quot;op&quot;: &quot;r">
 <meta name="twitter:image" content="https://ovpt.github.io/images/csv-injection-sample.png">
     
     
@@ -78,8 +70,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2017/03/25/Build Install and Launch iOS app on simluator/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
+        <li><a class="icon" href="/2017/03/25/Build Install and Launch iOS app on simluator/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
